@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4AB8E281C6B875100D93085 /* EmailLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB8E271C6B875100D93085 /* EmailLoginController.swift */; };
 		F4D53FA21C68DAAF00C01EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53FA11C68DAAF00C01EF0 /* AppDelegate.swift */; };
 		F4D53FA41C68DAAF00C01EF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53FA31C68DAAF00C01EF0 /* ViewController.swift */; };
 		F4D53FA71C68DAAF00C01EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D53FA51C68DAAF00C01EF0 /* Main.storyboard */; };
 		F4D53FA91C68DAAF00C01EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D53FA81C68DAAF00C01EF0 /* Assets.xcassets */; };
 		F4D53FAC1C68DAAF00C01EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D53FAA1C68DAAF00C01EF0 /* LaunchScreen.storyboard */; };
+		F4D53FB41C68F62500C01EF0 /* CustomLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53FB31C68F62500C01EF0 /* CustomLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4AB8E271C6B875100D93085 /* EmailLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginController.swift; sourceTree = "<group>"; };
 		F4D53F9E1C68DAAF00C01EF0 /* PW Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PW Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D53FA11C68DAAF00C01EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D53FA31C68DAAF00C01EF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		F4D53FA81C68DAAF00C01EF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D53FAB1C68DAAF00C01EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4D53FAD1C68DAAF00C01EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D53FB31C68F62500C01EF0 /* CustomLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4AB8E241C6B870600D93085 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F4AB8E251C6B870C00D93085 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F4AB8E261C6B871100D93085 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB8E271C6B875100D93085 /* EmailLoginController.swift */,
+				F4D53FA31C68DAAF00C01EF0 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		F4D53F951C68DAAF00C01EF0 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +81,15 @@
 		F4D53FA01C68DAAF00C01EF0 /* PW Journal */ = {
 			isa = PBXGroup;
 			children = (
+				F4AB8E261C6B871100D93085 /* Controller */,
+				F4AB8E251C6B870C00D93085 /* View */,
+				F4AB8E241C6B870600D93085 /* Model */,
 				F4D53FA11C68DAAF00C01EF0 /* AppDelegate.swift */,
-				F4D53FA31C68DAAF00C01EF0 /* ViewController.swift */,
 				F4D53FA51C68DAAF00C01EF0 /* Main.storyboard */,
 				F4D53FA81C68DAAF00C01EF0 /* Assets.xcassets */,
 				F4D53FAA1C68DAAF00C01EF0 /* LaunchScreen.storyboard */,
 				F4D53FAD1C68DAAF00C01EF0 /* Info.plist */,
+				F4D53FB31C68F62500C01EF0 /* CustomLogin.swift */,
 			);
 			path = "PW Journal";
 			sourceTree = "<group>";
@@ -138,6 +168,8 @@
 			files = (
 				F4D53FA41C68DAAF00C01EF0 /* ViewController.swift in Sources */,
 				F4D53FA21C68DAAF00C01EF0 /* AppDelegate.swift in Sources */,
+				F4AB8E281C6B875100D93085 /* EmailLoginController.swift in Sources */,
+				F4D53FB41C68F62500C01EF0 /* CustomLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +284,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MLBNP.PW-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -263,6 +296,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MLBNP.PW-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -285,6 +319,7 @@
 				F4D53FB21C68DAAF00C01EF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
