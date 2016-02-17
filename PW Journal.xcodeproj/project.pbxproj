@@ -17,6 +17,9 @@
 		F43852B31C6C913A002ED298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43852B21C6C913A002ED298 /* Main.storyboard */; };
 		F43A87401C6DB0DA002D04BF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43A873E1C6DB0DA002D04BF /* Accounts.framework */; };
 		F43A87411C6DB0DA002D04BF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43A873F1C6DB0DA002D04BF /* Social.framework */; };
+		F4754D8E1C723D2500CD14DB /* EmailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4754D8D1C723D2500CD14DB /* EmailButton.swift */; };
+		F4754D901C724C4900CD14DB /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4754D8F1C724C4900CD14DB /* EmailTextField.swift */; };
+		F4947C321C7357EF00500D94 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947C311C7357EF00500D94 /* User.swift */; };
 		F4AB8E281C6B875100D93085 /* EmailLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB8E271C6B875100D93085 /* EmailLoginController.swift */; };
 		F4D53FA21C68DAAF00C01EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53FA11C68DAAF00C01EF0 /* AppDelegate.swift */; };
 		F4D53FA41C68DAAF00C01EF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D53FA31C68DAAF00C01EF0 /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 		F43852B21C6C913A002ED298 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F43A873E1C6DB0DA002D04BF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Accounts.framework; sourceTree = "<group>"; };
 		F43A873F1C6DB0DA002D04BF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Social.framework; sourceTree = "<group>"; };
+		F4754D8D1C723D2500CD14DB /* EmailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailButton.swift; sourceTree = "<group>"; };
+		F4754D8F1C724C4900CD14DB /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		F4947C311C7357EF00500D94 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F4AB8E271C6B875100D93085 /* EmailLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginController.swift; sourceTree = "<group>"; };
 		F4D53F9E1C68DAAF00C01EF0 /* PW Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PW Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D53FA11C68DAAF00C01EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 		F4AB8E241C6B870600D93085 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4947C311C7357EF00500D94 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -114,6 +121,9 @@
 		F4AB8E251C6B870C00D93085 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4D53FB31C68F62500C01EF0 /* CustomLogin.swift */,
+				F4754D8D1C723D2500CD14DB /* EmailButton.swift */,
+				F4754D8F1C724C4900CD14DB /* EmailTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -156,19 +166,18 @@
 		F4D53FA01C68DAAF00C01EF0 /* PW Journal */ = {
 			isa = PBXGroup;
 			children = (
+				F4AB8E241C6B870600D93085 /* Model */,
 				F43852AF1C6C8E2B002ED298 /* Constants */,
 				F43852AC1C6C7633002ED298 /* Services */,
 				F4B2C53F1C6BB933003BD4CE /* Util */,
 				F4AB8E261C6B871100D93085 /* Controller */,
 				F4AB8E251C6B870C00D93085 /* View */,
-				F4AB8E241C6B870600D93085 /* Model */,
 				F4D53FA11C68DAAF00C01EF0 /* AppDelegate.swift */,
 				F43852B21C6C913A002ED298 /* Main.storyboard */,
 				F4D53FA81C68DAAF00C01EF0 /* Assets.xcassets */,
 				F4D53FAA1C68DAAF00C01EF0 /* LaunchScreen.storyboard */,
 				F4D53FAD1C68DAAF00C01EF0 /* Info.plist */,
 				F41A1B5A1C6E1B3A00B0A6E9 /* GoogleService-Info.plist */,
-				F4D53FB31C68F62500C01EF0 /* CustomLogin.swift */,
 			);
 			path = "PW Journal";
 			sourceTree = "<group>";
@@ -297,9 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4754D901C724C4900CD14DB /* EmailTextField.swift in Sources */,
 				F4D53FA41C68DAAF00C01EF0 /* ViewController.swift in Sources */,
+				F4754D8E1C723D2500CD14DB /* EmailButton.swift in Sources */,
 				F4D53FA21C68DAAF00C01EF0 /* AppDelegate.swift in Sources */,
 				F43852AE1C6C764E002ED298 /* DataService.swift in Sources */,
+				F4947C321C7357EF00500D94 /* User.swift in Sources */,
 				F43852B11C6C8E44002ED298 /* Constants.swift in Sources */,
 				F4AB8E281C6B875100D93085 /* EmailLoginController.swift in Sources */,
 				F4D53FB41C68F62500C01EF0 /* CustomLogin.swift in Sources */,

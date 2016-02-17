@@ -12,11 +12,13 @@ import FBSDKCoreKit
 
 
 
-class ViewController: UIViewController{
+class ViewController: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().clientID = "464672909246-qh5mgu25oakicep75eguat7g0oaemqk2.apps.googleusercontent.com"
        
     }
     
@@ -46,6 +48,8 @@ class ViewController: UIViewController{
                         print(error.description)
                     } else {
                         print("Successfully logged in \(authData)")
+                        let user = ["provider": authData.provider!]
+                        DataService.ds.firebaseUsers(keyForUID, user: user)
                         NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: keyForUID)
                         self.performSegueWithIdentifier(identifierForSegues, sender: nil)
                     }
@@ -60,6 +64,23 @@ class ViewController: UIViewController{
         GIDSignIn.sharedInstance().signIn()
         }
     
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        if error != nil {
+            print(error.description)
+        } else {
+            DataService.ds.baseURL.authWithOAuthProvider("google", token: user.authentication.accessToken, withCompletionBlock: { error, authData in
+                if error != nil {
+                    print(error.description)
+                } else {
+                    print("Successfully logged in \(authData)")
+                    let user = ["provider": authData.provider!]
+                    DataService.ds.firebaseUsers(keyForUID, user: user)
+                    NSUserDefaults.standardUserDefaults().setObject(authData.uid, forKey: keyForUID)
+                    self.performSegueWithIdentifier(identifierForSegues, sender: nil)
+                }
+            })
+        }
+    }
    
 
 }

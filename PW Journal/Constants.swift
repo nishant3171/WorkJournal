@@ -10,3 +10,4 @@ import Foundation
 
 let keyForUID = "uid"
 let identifierForSegues = "login"
+let _shadowColor: CGFloat = 157.0/255.0

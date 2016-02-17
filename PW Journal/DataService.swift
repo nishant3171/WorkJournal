@@ -28,4 +28,8 @@ class DataService{
     var dataURL: Firebase {
         return _dataURL
     }
+    
+    func firebaseUsers(uid: String, user: Dictionary<String, String>) {
+        _usersURl.childByAppendingPath(uid).setValue(user)
+    }
 }
